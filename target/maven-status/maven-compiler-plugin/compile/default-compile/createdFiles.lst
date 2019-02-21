@@ -1,0 +1,14 @@
+com/kuehnenagel/bitcoin/service/CurrentPriceServiceImpl.class
+com/kuehnenagel/bitcoin/bean/Time.class
+com/kuehnenagel/bitcoin/AppConfiguration.class
+com/kuehnenagel/bitcoin/BitcoinApplication.class
+com/kuehnenagel/bitcoin/service/HistoryPriceServiceInter.class
+com/kuehnenagel/bitcoin/bean/Currency.class
+com/kuehnenagel/bitcoin/util/MapUtil.class
+com/kuehnenagel/bitcoin/service/MenuServiceImpl.class
+com/kuehnenagel/bitcoin/util/InputUtil.class
+com/kuehnenagel/bitcoin/bean/ResultHistory.class
+com/kuehnenagel/bitcoin/bean/ResultCurrent.class
+com/kuehnenagel/bitcoin/service/CurrentPriceServiceInter.class
+com/kuehnenagel/bitcoin/service/MenuServiceInter.class
+com/kuehnenagel/bitcoin/service/HistoryPriceServiceImpl.class
