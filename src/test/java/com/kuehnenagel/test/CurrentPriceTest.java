@@ -1,8 +1,8 @@
-package com.kuehnenagel.test.it;
+package com.kuehnenagel.test;
 
 import com.kuehnenagel.bitcoin.BitcoinApplication;
-import com.kuehnenagel.bitcoin.bean.ResultHistory;
-import com.kuehnenagel.bitcoin.service.HistoryPriceServiceInter;
+import com.kuehnenagel.bitcoin.bean.ResultCurrent;
+import com.kuehnenagel.bitcoin.service.CurrentPriceServiceInter;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,15 +13,16 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = BitcoinApplication.class,properties = {"job.autorun.enabled=false"})
-public class HistoryPriceIT {
+public class CurrentPriceTest {
 
     @Autowired
-    HistoryPriceServiceInter historyPriceService;
+    CurrentPriceServiceInter currentPriceService;
 
     @Test
     public void getCurrentPrice(){
-        ResultHistory result = historyPriceService.getHistoryPrice("USD","2013-03-01","2013-03-05");
+        ResultCurrent result = currentPriceService.getCurrentPrice("USD");
         Assert.assertNotNull("can not be null", result);
+        Assert.assertEquals("must be USD","USD", result.getBpi().get("USD").getCode());
     }
 
 }
