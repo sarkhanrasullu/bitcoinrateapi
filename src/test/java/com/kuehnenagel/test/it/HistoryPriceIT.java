@@ -1,5 +1,6 @@
 package com.kuehnenagel.test.it;
 
+import com.kuehnenagel.bitcoin.BitcoinApplication;
 import com.kuehnenagel.bitcoin.bean.ResultHistory;
 import com.kuehnenagel.bitcoin.service.HistoryPriceServiceInter;
 import org.junit.Assert;
@@ -11,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(properties = {"job.autorun.enabled=false"})
+@SpringBootTest(classes = BitcoinApplication.class,properties = {"job.autorun.enabled=false"})
 public class HistoryPriceIT {
 
     @Autowired
